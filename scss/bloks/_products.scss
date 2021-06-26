@@ -1,0 +1,126 @@
+.products {
+  margin-bottom: 168px;
+}
+
+.products__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.products__item {
+  position: relative;
+  z-index: 1;
+  background: #f1f1f1;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 350px;
+  height: 205px;
+  padding-top: 116px;
+  padding-bottom: 30px;
+  margin: 0 15px;
+
+  &::before {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 123px;
+    height: 160px;
+    background-image: url(../images/products-part/headphones.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+  }
+  &::after {
+    background: #000000;
+    filter: blur(43.4925px);
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 122px;
+    height: 25px;
+    content: "";
+  }
+
+  &:hover .products__paragraph {
+    color: #d87d4a;
+  }
+}
+
+.headphones {
+  &::before {
+    background-image: url(../images/products-part/headphones.png);
+  }
+}
+
+.speakers {
+  &::before {
+    background-image: url(../images/products-part/speakers.png);
+  }
+}
+
+.earphones {
+  &::before {
+    background-image: url(../images/products-part/earphones.png);
+  }
+}
+
+.products__heading {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.products__paragraph {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding-right: 13px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    background-image: url(../images/products-part/vector.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+  }
+}
+
+@media only screen and (max-width: 706px) {
+  .products {
+    margin-bottom: 120px;
+  }
+
+  .products__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products__item {
+    margin-top: 128px;
+  }
+}

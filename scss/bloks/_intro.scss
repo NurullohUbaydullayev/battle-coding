@@ -1,0 +1,126 @@
+.intro {
+  background-color: #141414;
+  margin-bottom: 200px;
+}
+
+.intro .container {
+  background-image: url(../images/intro-part/intro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.intro__wrapper {
+  @include mwidth(420px);
+  padding-top: 128px;
+  padding-bottom: 151px;
+}
+
+.intro__paragraph {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.intro__heading {
+  margin-bottom: 24px;
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.intro__info-paragraph {
+  @include mwidth(349px);
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+
+.intro__link {
+  background-color: #d87d4a;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #fbaf85;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .intro .container {
+    background-image: url(../images/intro-part/intro@2x.jpg);
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .intro {
+    background-color: #141414;
+    margin-bottom: 148px;
+  }
+
+  .intro .container {
+    background-image: url(../images/intro-part/intro-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .intro__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 638px) {
+  .intro {
+    margin-bottom: 92px;
+  }
+
+  .intro .container {
+    background-image: url(../images/intro-part/intro-mobile.jpg);
+  }
+
+  .intro__wrapper {
+    @include mwidth(328px);
+    padding-top: 108px;
+    padding-bottom: 112px;
+  }
+
+  .intro__paragraph {
+    margin-bottom: 16px;
+  }
+
+  .intro__heading {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .intro__info-paragraph {
+    margin-bottom: 28px;
+  }
+}

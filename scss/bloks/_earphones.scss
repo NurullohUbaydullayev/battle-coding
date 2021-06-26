@@ -1,0 +1,88 @@
+.earphones-section {
+  margin-bottom: 200px;
+}
+
+.earphones-section .container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.earphones-info {
+  width: 100%;
+  max-width: 540px;
+  margin-left: 20px;
+  padding: 101px 198px 101px 95px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.earphones-info__heading {
+  margin-bottom: 32px;
+  font-family: "Manrope";
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.earphones-info__link {
+  padding: 15px 30px;
+  border: 1px solid #000000;
+  font-family: "Manrope";
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.earphones-info__link:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.earphones-img {
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1076px) {
+  .earphones-img {
+    max-width: 339px;
+    height: auto;
+  }
+
+  .earphones-info {
+    max-width: 339px;
+  }
+
+  .earphones-info {
+    padding: 101px 51px;
+    padding-left: 41px;
+  }
+}
+
+@media only screen and (max-width: 1076px) {
+  .earphones-section .container {
+    flex-direction: column;
+  }
+
+  .earphones-img {
+    width: 100%;
+    max-width: 327px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+
+  .earphones-info {
+    max-width: 327px;
+    margin-left: 0;
+    margin: 0 auto;
+    padding: 41px 56px;
+    padding-left: 24px;
+  }
+}
